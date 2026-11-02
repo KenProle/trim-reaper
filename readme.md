@@ -20,6 +20,16 @@ Inspired by [Dread Ledger](https://github.com/jmanico/dread-ledger) and
 - **For an optional assessment before changes:** use the [assessment-only prompt](#assessment-only) to review candidates and risks.
 - **When reducing existing dependencies:** use the [dependency reduction prompts](#dependency-reduction-prompts) in your preferred coding agent.
 
+## Claude Code skill (this fork)
+
+`skills/trim-reaper/` packages the prompts below as one Claude Code skill. Install it for all your projects:
+
+```bash
+cp -r skills/trim-reaper ~/.claude/skills/
+```
+
+Then, in any project: `/trim-reaper assess`, `/trim-reaper policy`, `/trim-reaper 1` … `/trim-reaper 8`. Each numbered pass automatically includes the shared instruction and the library policy. The skill is user-invoked only. The prompt files are verbatim copies of the blocks in this readme, so re-copy them when the readme changes.
+
 ## Third-party library policy
 
 Add this section to your project's `AGENTS.md` or equivalent persistent agent instructions. If it already contains dependency guidance, reconcile the instructions into one consistent policy.
