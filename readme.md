@@ -41,7 +41,7 @@ On Claude Code versions before 2.1.275, add the marketplace first: `/plugin mark
 
 Without the plugin system, copy the skill folder instead: `cp -r skills/trim-reaper ~/.claude/skills/`.
 
-Then, in any project: `/trim-reaper assess` (from the plugin, Claude Code namespaces it as `/trim-reaper:trim-reaper assess`), `/trim-reaper policy`, `/trim-reaper 1` … `/trim-reaper 8`. Each numbered pass automatically includes the shared instruction and the library policy. The skill is user-invoked only. The prompt files are verbatim copies of the blocks in this readme, so re-copy them when the readme changes.
+Then, in any project: `/trim-reaper:trim-reaper assess`, `/trim-reaper:trim-reaper policy`, `/trim-reaper:trim-reaper 1` … `/trim-reaper:trim-reaper 8` (Claude Code prefixes a plugin's skills with the plugin name; with the copied folder, drop the prefix: `/trim-reaper assess`). Each numbered pass automatically includes the shared instruction and the library policy. The skill is user-invoked only. The prompt files are verbatim copies of the blocks in this readme: when they change, plugin users get them with `/plugin update trim-reaper@trim-reaper`, and copy users re-copy the folder.
 
 ## Third-party library policy
 

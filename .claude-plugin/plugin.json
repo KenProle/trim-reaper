@@ -1,7 +1,7 @@
 {
   "name": "trim-reaper",
   "version": "0.1.0",
-  "description": "Trim Reaper dependency-reduction passes (assess, 1-8, policy) for Claude Code: remove unnecessary libraries while preserving behavior, security and compatibility.",
+  "description": "Jim Manico's Trim Reaper (github.com/jmanico/trim-reaper, MIT) dependency-reduction passes (assess, 1-8, policy) for Claude Code: remove unnecessary libraries while preserving behavior, security and compatibility.",
   "author": {
     "name": "Ken Prole",
     "url": "https://github.com/KenProle"
