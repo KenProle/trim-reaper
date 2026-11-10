@@ -22,13 +22,26 @@ Inspired by [Dread Ledger](https://github.com/jmanico/dread-ledger) and
 
 ## Claude Code skill (this fork)
 
-`skills/trim-reaper/` packages the prompts below as one Claude Code skill. Install it for all your projects:
+`skills/trim-reaper/` packages the prompts below as one Claude Code skill, and this repository is also a one-plugin marketplace. Install it for all your projects:
 
-```bash
-cp -r skills/trim-reaper ~/.claude/skills/
+```
+/plugin install trim-reaper --marketplace KenProle/trim-reaper
 ```
 
-Then, in any project: `/trim-reaper assess`, `/trim-reaper policy`, `/trim-reaper 1` … `/trim-reaper 8`. Each numbered pass automatically includes the shared instruction and the library policy. The skill is user-invoked only. The prompt files are verbatim copies of the blocks in this readme, so re-copy them when the readme changes.
+On Claude Code versions before 2.1.275, add the marketplace first: `/plugin marketplace add KenProle/trim-reaper`, then `/plugin install trim-reaper@trim-reaper`. To offer it to everyone working in a repository, commit this to the repository's `.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "trim-reaper": { "source": { "source": "github", "repo": "KenProle/trim-reaper" } }
+  },
+  "enabledPlugins": { "trim-reaper@trim-reaper": true }
+}
+```
+
+Without the plugin system, copy the skill folder instead: `cp -r skills/trim-reaper ~/.claude/skills/`.
+
+Then, in any project: `/trim-reaper assess` (from the plugin, Claude Code namespaces it as `/trim-reaper:trim-reaper assess`), `/trim-reaper policy`, `/trim-reaper 1` … `/trim-reaper 8`. Each numbered pass automatically includes the shared instruction and the library policy. The skill is user-invoked only. The prompt files are verbatim copies of the blocks in this readme, so re-copy them when the readme changes.
 
 ## Third-party library policy
 
