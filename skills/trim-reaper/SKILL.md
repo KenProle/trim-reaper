@@ -32,6 +32,6 @@ If the argument is empty or unrecognized, list the options above and stop.
 2. Read `policy.md` too. `shared.md` refers to "the third-party library policy above"; this file is that policy. If the project's `AGENTS.md`/`CLAUDE.md` already has its own dependency policy, follow the project's version and use `policy.md` only to fill gaps.
 3. Read the selected pass file and carry it out under the shared instruction.
 4. Run only the selected pass. Don't continue into other passes unless the user asks.
-5. After any pass other than 8, remind the user to finish with `/trim-reaper 8`.
+5. After any pass other than 8, remind the user to finish with pass 8 (verify): `/trim-reaper:trim-reaper 8` when installed as a plugin, `/trim-reaper 8` when copied into `~/.claude/skills/`.
 
 The prompt files are copied verbatim from the Trim Reaper readme (https://github.com/jmanico/trim-reaper, MIT). Keep them in sync with `readme.md` when it changes upstream.

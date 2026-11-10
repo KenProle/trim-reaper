@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "trim-reaper",
+  "description": "Trim Reaper dependency-reduction prompts, packaged as a Claude Code plugin.",
+  "owner": {
+    "name": "Ken Prole",
+    "url": "https://github.com/KenProle"
+  },
+  "plugins": [
+    {
+      "name": "trim-reaper",
+      "description": "Dependency-reduction passes (assess, 1-8, policy) that preserve behavior, security and compatibility.",
+      "source": "./",
+      "category": "development"
+    }
+  ]
+}
